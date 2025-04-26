@@ -14,7 +14,7 @@ import {
       // Button
       import { Button } from "./ui/button";
       // Icons
-      import { ChevronDown, LayoutDashboard, StarsIcon } from "lucide-react";
+      import { ChevronDown, FileText, GraduationCap, LayoutDashboard, PenBox, StarsIcon } from "lucide-react";
       // Dropdown Menu
       import {
         DropdownMenu,
