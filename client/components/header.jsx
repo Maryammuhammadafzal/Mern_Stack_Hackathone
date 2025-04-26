@@ -10,11 +10,9 @@ import {
       // Link
       import Link from "next/link";
       // Logo
-      import Logo from "./ui/logo";
+      // import Logo from "./ui/logo";
       // Button
       import { Button } from "./ui/button";
-      // Icons
-      import { ChevronDown, LayoutDashboard, StarsIcon } from "lucide-react";
       // Dropdown Menu
       import {
         DropdownMenu,
@@ -22,10 +20,7 @@ import {
         DropdownMenuItem,
         DropdownMenuTrigger,
       } from "@radix-ui/react-dropdown-menu";
-      import Image from "next/image";
-      import { FileText } from "lucide-react";
-      import { GraduationCap } from "lucide-react";
-      import { PenBox } from "lucide-react";
+      // import Image from "next/image";
       
       const Header = () => {
         return (

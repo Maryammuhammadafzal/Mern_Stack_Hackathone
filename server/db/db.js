@@ -6,7 +6,7 @@ const url = process.env.MONGODB_URL
 const connectToDb= async()=>{
 
     try{
-        await mongoose.connect(url,{dbName:"ecommerce"})
+        await mongoose.connect(url)
         console.log(chalk.bgGreen.white('connected to MongoDB'));
     }
     catch(error){
