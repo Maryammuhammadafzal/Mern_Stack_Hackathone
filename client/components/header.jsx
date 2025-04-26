@@ -13,6 +13,8 @@ import {
       // import Logo from "./ui/logo";
       // Button
       import { Button } from "./ui/button";
+      // Icons
+      import { ChevronDown, LayoutDashboard, StarsIcon } from "lucide-react";
       // Dropdown Menu
       import {
         DropdownMenu,
@@ -20,7 +22,7 @@ import {
         DropdownMenuItem,
         DropdownMenuTrigger,
       } from "@radix-ui/react-dropdown-menu";
-      // import Image from "next/image";
+      import Image from "next/image";
       
       const Header = () => {
         return (
@@ -28,7 +30,7 @@ import {
             <nav className="container fixed top-0 mx-auto z-50 px-4 h-16 flex items-center justify-between">
               {/* Logo */}
               <Link href="/" className="w-fit h-fit ">
-                <Logo />
+                {/* <Logo /> */}
               </Link>
               {/* Navbar Button */}
               <div className="flex items-center space-x-2 md:space-x-4">
