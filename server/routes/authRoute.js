@@ -1,23 +1,10 @@
-// import express from "express";
-// import authenticate from "../middlewares/authenticate.js";
 
-// const router = express.Router();
-// import {
-//   getAllUsers,
-//   updateUser,
-//   deleteUser,
-//   login,
-//   signup,
-//   isAdmin
-// } from "../controllers/authController.js";
+import express from "express";
+import { signup, login } from "../controllers/authController.js";
 
+const router = express.Router();
 
-// router.post("/signup", signup);
-// router.post("/login", login);
-// router.get("/getUsers", authenticate , getAllUsers);
-// router.delete("/deleteUser/:id", authenticate , deleteUser)
-// router.put("/updateUser/:id", authenticate , updateUser)
-// router.get("/isAdmin", authenticate , isAdmin)
+router.post("/signup", signup);
+router.post("/login", login);
 
-
-// export default router;
+export default router;

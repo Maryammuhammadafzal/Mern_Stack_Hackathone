@@ -1,10 +1,14 @@
 import React from 'react'
+// import Logo from ""
 
 const header = () => {
   return (
-    <div>
-      
-    </div>
+    <header>
+      {/* Logo */}
+      <div className="logo">
+        <img src="" alt="" />
+      </div>
+    </header>
   )
 }
 
