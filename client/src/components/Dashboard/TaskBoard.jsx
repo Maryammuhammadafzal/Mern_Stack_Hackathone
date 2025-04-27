@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TaskCard from "./TaskCard";
-const baseUrl = import.meta.env.VITE_API_URL;
+
 export default function TaskBoard({ tasks, openModal }) {
   const [tasksState, setTasksState] = useState(tasks);
 
