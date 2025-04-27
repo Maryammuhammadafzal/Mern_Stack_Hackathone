@@ -6,6 +6,7 @@ import connectToDb from "./db/db.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const __dirname = path.resolve();
 
 // connect to db
 connectToDb();
@@ -14,21 +15,20 @@ app.use(express.json());
 
 app.use(cors({
   origin: [
-    'http://localhost:5173',
-    'http://localhost:5174',
-    'https://mernstackhackathone-production.up.railway.app/',
     'https://mern-stack-hackathone.vercel.app',
   ],
   methods: ['GET', 'PUT', 'POST', 'DELETE'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+app.use("/uploads", express.static(path.join(__dirname, 'uploads')));
 
 // ⬇️ APIs first
 // app.use('/api/auth', userRoutes);
 
 // then static files
-const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get("/" ,(req , res)=> {
