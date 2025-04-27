@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+const baseUrl = import.meta.env.VITE_API_URL;
 
 export default function TaskCard({ task, onStatusChange, onEdit, onDelete }) {
   const [isUpdating, setIsUpdating] = useState(false);
@@ -9,7 +10,7 @@ export default function TaskCard({ task, onStatusChange, onEdit, onDelete }) {
     try {
       setIsUpdating(true);
 
-      const response = await axios.put(`http://localhost:5000/api/tasks/${id}`, {
+      const response = await axios.put(`${baseUrl}/api/tasks/${id}`, {
         status: newStatus, // Updating the status
       });
 

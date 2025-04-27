@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Nvabar.jsx";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import TaskBoard from "./TaskBoard.jsx";
-
+const baseUrl = import.meta.env.VITE_API_URL;
 export default function Board() {
   const { token } = useContext(AuthContext);
   const [tasks, setTasks] = useState([]);
@@ -16,7 +16,7 @@ export default function Board() {
   const navigate = useNavigate();
 
   const fetchTasks = async () => {
-    const res = await fetch("http://localhost:5000/api/tasks");
+    const res = await fetch(`${baseUrl}/api/tasks`);
     const data = await res.json();
     setTasks(data);
   };
@@ -37,14 +37,14 @@ export default function Board() {
     try {
       if (mode === 'edit') {
         // Update existing task
-        await axios.put(`http://localhost:5000/api/tasks/${form._id}`, form, {
+        await axios.put(`${baseUrl}/api/tasks/${form._id}`, form, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
       } else {
         // Create new task
-        await axios.post("http://localhost:5000/api/tasks", form, {
+        await axios.post(`${baseUrl}/api/tasks`, form, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

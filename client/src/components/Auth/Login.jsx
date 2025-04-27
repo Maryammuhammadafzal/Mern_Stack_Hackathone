@@ -4,6 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 
+const baseUrl = import.meta.env.VITE_API_URL;
+
+
+
 export default function Login() {
   let [showPassword, setShowPassword] = useState(false);
   const { login } = useContext(AuthContext);
@@ -22,7 +26,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/api/auth/login", {
+    const res = await fetch(`${baseUrl}/api/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
