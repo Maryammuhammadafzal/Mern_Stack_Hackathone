@@ -69,13 +69,15 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static(path.join(__dirname, 'uploads')));
 
-app.use("/api/auth", authRoutes);
-app.use("/api/tasks", taskRoutes);
 // dumy route
 app.get('/favicon.ico', (req, res) => res.status(204).end());
+
+
+app.use("/api/auth", authRoutes);
+app.use("/api/tasks", taskRoutes);
 // / api route
 app.get("/" ,(req , res)=> {
-	res.send("Hello")
+  res.send("Hello")
 })
 
 // app listen on Port
