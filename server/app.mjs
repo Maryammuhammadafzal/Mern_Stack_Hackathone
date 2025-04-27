@@ -14,7 +14,7 @@ app.use(
 			'http://localhost:5173',
 			'http://localhost:5174',
 			'https://mernstackhackathone-production.up.railway.app/',
-			'https://mern-stack-hackathone.vercel.app/',
+			'https://mern-stack-hackathone.vercel.app',
 		],
 		methods: ['GET', 'PUT', 'POST', 'DELETE'],
 		credentials: true,
@@ -47,6 +47,9 @@ app.use('/api/auth', userRoutes);
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+app.get('/', (req, res) => {
+	res.send("Hello")
 });
 app.listen(PORT, () => {
 	console.log('server is listening 5000');
