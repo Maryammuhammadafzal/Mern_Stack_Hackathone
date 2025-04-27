@@ -13,8 +13,8 @@ app.use(
 		origin: [
 			'http://localhost:5173',
 			'http://localhost:5174',
-			// 'https://batch11-mern-stack-1.onrender.com',
-			// 'https://batch11-mern-stack.vercel.app/',
+			'https://mernstackhackathone-production.up.railway.app/',
+			'https://mern-stack-hackathone.vercel.app/',
 		],
 		methods: ['GET', 'PUT', 'POST', 'DELETE'],
 		credentials: true,
