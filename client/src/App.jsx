@@ -7,7 +7,6 @@ import Signup from "./components/Auth/Signup.jsx"
 import Board from './components/Dashboard/Board.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
