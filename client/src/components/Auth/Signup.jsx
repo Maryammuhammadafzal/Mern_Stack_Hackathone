@@ -27,6 +27,7 @@ export default function Signup() {
     if(form.length === 0 ) {
       alert("All feilds are required")
     }
+    console.log(form);
     const res = await fetch(`${baseUrl}/api/auth/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

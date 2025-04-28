@@ -29,6 +29,8 @@ export default function Login() {
     if(form.length === 0 ) {
       alert("All feilds are required")
     }
+    console.log(form);
+    
     const res = await fetch(`${baseUrl}/api/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
