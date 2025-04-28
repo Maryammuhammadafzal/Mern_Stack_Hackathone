@@ -34,9 +34,10 @@ export default function Login() {
     const data = await res.json();
     if (res.ok) {
       login(data.user, data.token);
+      alert("User Login Succesfully")
       navigate("/dashboard");
     } else {
-      alert(data.error);
+      alert("Error Login User" ,data.error);
     }
   };
 

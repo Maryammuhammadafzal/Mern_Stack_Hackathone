@@ -31,9 +31,10 @@ export default function Signup() {
     const data = await res.json();
     if (res.ok) {
       login(data.user, data.token);
+      alert("User Signup Successfully")
       navigate("/dashboard");
     } else {
-      alert(data.error);
+      alert("Error Signup User" ,data.error);
     }
   };
 
